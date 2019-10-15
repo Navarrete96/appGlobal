@@ -1,10 +1,13 @@
 package com.example.appglobation;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -16,15 +19,33 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        BottomNavigationView navView = findViewById(R.id.nav_view);
-        // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
-        AppBarConfiguration appBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.navigation_home, R.id.navigation_dashboard, R.id.navigation_notifications)
-                .build();
-        NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
-        NavigationUI.setupWithNavController(navView, navController);
+
+        BottomNavigationView bottomNavigationView = findViewById(R.id.nav_view);
+        bottomNavigationView.setOnNavigationItemSelectedListener(navs);
     }
+
+    private BottomNavigationView.OnNavigationItemSelectedListener navs = new
+            BottomNavigationView.OnNavigationItemSelectedListener() {
+
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
+                    Fragment fragment = null;
+                    switch (menuItem.getItemId()) {
+                        case R.id.navigation_home:
+                            fragment = new HomeFragment();
+                            break;
+                        case R.id.navigation_dashboard:
+                            fragment = new LoginFragment();
+                            break;
+                        case R.id.navigation_notifications:
+                            fragment = new HelpFragment();
+                            break;
+
+                    }
+                    getSupportFragmentManager().beginTransaction().replace(R.id.nav_host_fragment,
+                            fragment).commit();
+                    return true;
+                }
+            };
 
 }
