@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_margin="30dp"
+    android:layout_margin="20dp"
     tools:context=".LoginFragment">
 
     <LinearLayout
@@ -12,61 +12,80 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="250dp"
+            android:layout_height="55dp"
+            android:layout_gravity="center"
+            android:src="@mipmap/accountcircle"/>
+
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="35dp">
+
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/editEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Ingrese su correo" />
+                android:hint="Ingrese su correo"
+                android:inputType="textPersonName" />
         </com.google.android.material.textfield.TextInputLayout>
 
 
-
-        <EditText
-            android:id="@+id/editText2"
+        <com.google.android.material.textfield.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:ems="10"
-            android:layout_marginTop="50dp"
-            android:inputType="textPersonName"
-            android:hint="Ingrese su contraseña" />
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_marginTop="30dp">
+
+            <EditText
+                android:id="@+id/editPassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="Ingrese su contraseña"
+                android:inputType="textPassword" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
 
         <Button
             android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:textSize="17dp"
-            app:fontFamily="@font/aclonica"
             android:layout_marginTop="50dp"
             android:layout_marginBottom="20dp"
-            android:text="Entrar" />
+            android:text="Entrar"
+            android:textSize="17dp"
+            android:textColor="@color/button_text_color"
+            android:background="@color/colorPrimary"
+            app:fontFamily="@font/aclonica" />
 
         <Button
             android:id="@+id/btnCrear"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:background="@color/colorPrimary"
-            android:textSize="17dp"
-            app:fontFamily="@font/aclonica"
             android:layout_marginBottom="20dp"
-            android:text="Crear cuenta" />
+            android:textColor="#000000"
+            android:text="Crear cuenta"
+            android:textSize="17dp"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            app:fontFamily="@font/aclonica" />
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:orientation="horizontal">
+
             <TextView
                 android:id="@+id/textView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Olvido su contraseña?" />
+
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="match_parent"
@@ -74,7 +93,6 @@
                 android:layout_marginLeft="10dp"
                 android:text="Entrar aqui" />
         </LinearLayout>
-
 
 
     </LinearLayout>

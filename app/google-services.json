@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "721810046361",
+    "firebase_url": "https://appglobales-adb78.firebaseio.com",
+    "project_id": "appglobales-adb78",
+    "storage_bucket": "appglobales-adb78.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721810046361:android:42394243308001730da708",
+        "android_client_info": {
+          "package_name": "com.example.appglobation"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721810046361-h96p2f02jviiucs1mv2uo5dml3fn9i2f.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBKTJIroqXumNsQvVSxORxKKof2mqxVYqY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721810046361-h96p2f02jviiucs1mv2uo5dml3fn9i2f.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

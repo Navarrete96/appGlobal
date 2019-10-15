@@ -28,7 +28,7 @@
             android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/editText"
-                android:layout_width="wrap_content"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -40,7 +40,7 @@
         android:layout_height="wrap_content">
         <EditText
             android:id="@+id/editText1"
-            android:layout_width="match_parent"
+            android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:ems="10"
             android:inputType="textPersonName"
@@ -52,7 +52,7 @@
             android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/editText2"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -64,7 +64,7 @@
             android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/editTextCorreo"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -76,7 +76,7 @@
             android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/editTextPassword"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -88,7 +88,7 @@
             android:layout_height="wrap_content">
             <EditText
                 android:id="@+id/editTextd1"
-                android:layout_width="match_parent"
+                android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
                 android:inputType="textPersonName"
@@ -98,21 +98,21 @@
 
         <Button
             android:id="@+id/crearCuenta"
-            android:layout_width="135dp"
+            android:layout_width="290dp"
             android:layout_height="49dp"
-            android:background="@color/colorPrimary"
             android:text="Crear"
-            android:textColor="#000000"
+            android:textColor="@color/button_text_color"
             android:textColorLink="#2196F3"
             android:textSize="17dp"
+            style="@style/Widget.MaterialComponents.Button.UnelevatedButton"
             app:fontFamily="@font/aclonica"
             android:layout_marginTop="15dp"/>
 
         <Button
             android:id="@+id/crearVolver"
-            android:layout_width="135dp"
+            android:layout_width="290dp"
             android:layout_height="49dp"
-            android:background="@color/colorPrimary"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
             android:text="Volver"
             android:textColor="#000000"
             android:textColorLink="#2196F3"
