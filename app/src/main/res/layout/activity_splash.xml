@@ -11,7 +11,7 @@
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="190dp"
-        android:layout_height="190dp"
+        android:layout_height="250dp"
         android:layout_gravity="center"
         app:srcCompat="@mipmap/logo" />
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
