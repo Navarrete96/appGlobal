@@ -27,7 +27,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/editText"
+                android:id="@+id/editTextNombre"
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -39,7 +39,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content">
         <EditText
-            android:id="@+id/editText1"
+            android:id="@+id/editTextPrimerApellido"
             android:layout_width="290dp"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -51,7 +51,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/editText2"
+                android:id="@+id/editTextSegundoApellido"
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
@@ -87,11 +87,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content">
             <EditText
-                android:id="@+id/editTextd1"
+                android:id="@+id/idFechaNacimiento"
                 android:layout_width="290dp"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="textPassword"
                 android:hint="Fecha de Nacimieto" />
         </com.google.android.material.textfield.TextInputLayout>
 
