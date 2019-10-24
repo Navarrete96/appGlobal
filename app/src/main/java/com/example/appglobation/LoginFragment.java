@@ -2,6 +2,7 @@ package com.example.appglobation;
 
 
 import android.app.Activity;
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -33,6 +34,7 @@ public class LoginFragment extends Fragment {
     private Button btnLogin, btnCrear;
     private EditText editTextEmail, editTextPassword;
     private FirebaseAuth auth;
+    private ProgressDialog progressDialog;
 
     public LoginFragment() {
     }
@@ -75,6 +77,8 @@ public class LoginFragment extends Fragment {
         btnLogin = v.findViewById(R.id.btnLogin);
         editTextEmail = v.findViewById(R.id.editEmail);
         editTextPassword = v.findViewById(R.id.editPassword);
+        progressDialog = new ProgressDialog(getContext());
+        progressDialog.setMessage("Cargando..");
     }
 
     private void login(String email, String password) {
@@ -83,21 +87,20 @@ public class LoginFragment extends Fragment {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            new SweetAlertDialog(getContext(), SweetAlertDialog.SUCCESS_TYPE)
-                                    .setContentText("Bienvenido!")
-                                    .show();
+                            progressDialog.show();
                             new Handler().postDelayed(new Runnable() {
                                 @Override
                                 public void run() {
+                                    progressDialog.dismiss();
                                     HomeActivity homeActivity = new HomeActivity();
                                     Intent intent = new Intent(getContext(), homeActivity.getClass());
                                     startActivity(intent);
+
                                 }
                             },3000);
 
                         } else {
                             new SweetAlertDialog(getContext(), SweetAlertDialog.ERROR_TYPE)
-                                    .setTitleText("Oops...")
                                     .setContentText("El correo o contraseña son incorrectos")
                                     .show();
                         }

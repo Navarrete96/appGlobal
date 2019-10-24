@@ -4,25 +4,30 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
     tools:context=".LoginFragment">
+    <include layout="@layout/toolbar"/>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="250dp"
-            android:layout_height="55dp"
-            android:layout_gravity="center"
-            android:src="@mipmap/accountcircle"/>
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+        <TextView
+            android:id="@+id/textView6"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Entrepreneurs"
+            android:textColor="@color/colorPrimary"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="100dp"
+            android:textSize="30sp" />
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="35dp">
+            android:layout_marginTop="55dp">
 
             <EditText
                 android:id="@+id/editEmail"
@@ -94,6 +99,8 @@
                 android:layout_marginLeft="10dp"
                 android:text="Entrar aqui" />
         </LinearLayout>
+
+
 
 
     </LinearLayout>

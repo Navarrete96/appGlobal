@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".CrearServiciosActivity">
-
+    <include layout="@layout/toolbar" />
 
     <TextView
         android:id="@+id/textView"
