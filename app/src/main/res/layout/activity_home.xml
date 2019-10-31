@@ -90,6 +90,7 @@
         android:layout_height="wrap_content"
         android:gravity="center">
         <androidx.cardview.widget.CardView
+            android:id="@+id/idMyAccount"
             android:layout_width="160dp"
             android:layout_height="190dp"
             android:layout_margin="10dp"

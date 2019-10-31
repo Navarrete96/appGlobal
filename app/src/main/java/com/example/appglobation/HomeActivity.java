@@ -14,6 +14,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class HomeActivity extends AppCompatActivity {
     private CardView cardViewExit;
     private CardView cardViewCrearService;
+    private CardView cardMyAccount;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -40,6 +41,15 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        cardMyAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                MiCuentaActivity miCuentaActivity = new MiCuentaActivity();
+                Intent intent = new Intent(HomeActivity.this,miCuentaActivity.getClass());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -51,5 +61,6 @@ public class HomeActivity extends AppCompatActivity {
     private void init(){
         cardViewExit = findViewById(R.id.idSalir);
         cardViewCrearService = findViewById(R.id.idCreateService);
+        cardMyAccount = findViewById(R.id.idMyAccount);
     }
 }
