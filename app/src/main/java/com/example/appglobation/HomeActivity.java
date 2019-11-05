@@ -15,6 +15,7 @@ public class HomeActivity extends AppCompatActivity {
     private CardView cardViewExit;
     private CardView cardViewCrearService;
     private CardView cardMyAccount;
+    private CardView cardShowService;
     private FirebaseAuth firebaseAuth;
 
     @Override
@@ -50,6 +51,15 @@ public class HomeActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        cardShowService.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                ListaServicioActivity listaServicioActivity = new ListaServicioActivity();
+                Intent intent = new Intent(HomeActivity.this,listaServicioActivity.getClass());
+                startActivity(intent);
+            }
+        });
     }
 
     @Override
@@ -62,5 +72,6 @@ public class HomeActivity extends AppCompatActivity {
         cardViewExit = findViewById(R.id.idSalir);
         cardViewCrearService = findViewById(R.id.idCreateService);
         cardMyAccount = findViewById(R.id.idMyAccount);
+        cardShowService = findViewById(R.id.idBuscarServicio);
     }
 }

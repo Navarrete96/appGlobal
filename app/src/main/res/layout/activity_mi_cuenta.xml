@@ -11,89 +11,99 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-        <include layout="@layout/toolbar"/>
+
+        <include layout="@layout/toolbar" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
             android:layout_marginTop="20dp"
-            android:textStyle="bold"
-            android:textSize="23sp"
-            android:textColor="@color/colorPrimary"
             android:layout_marginBottom="25dp"
-            android:text="Mi Información" />
+            android:gravity="center"
+            android:text="Mi Información"
+            android:textColor="@color/colorPrimary"
+            android:textSize="23sp"
+            android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_gravity="center">
 
             <EditText
                 android:id="@+id/editTextNombre"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:inputType="textPersonName"
-                android:editable="false"
                 android:clickable="false"
+                android:editable="false"
+                android:ems="10"
                 android:focusable="false"
-                android:hint="Nombre" />
+                android:hint="Nombre"
+                android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_marginTop="30dp">
 
             <EditText
                 android:id="@+id/idEditextPrimerApellido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:ems="10"
-                android:editable="false"
                 android:clickable="false"
+                android:editable="false"
+                android:ems="10"
                 android:focusable="false"
-                android:inputType="textPersonName"
-                android:hint="Primer Apellido" />
+                android:hint="Primer Apellido"
+                android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
             android:layout_width="280dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginTop="30dp"
-            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+            android:layout_marginTop="30dp">
 
             <EditText
                 android:id="@+id/idEditextSegundoApellido"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:ems="10"
-                android:inputType="textPersonName"
-                android:hint="Segundo Apellido" />
+                android:hint="Segundo Apellido"
+                android:inputType="textPersonName" />
 
         </com.google.android.material.textfield.TextInputLayout>
 
         <Button
             android:id="@+id/buttonVerMisServicios"
             android:layout_width="280dp"
+            android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="30dp"
-            android:layout_height="wrap_content"
-            android:text="Mis Servicios"
-            android:editable="false"
-            android:clickable="false"
-            android:focusable="false"
-            android:textColor="@color/button_text_color"
             android:background="@color/colorPrimary"
-        />
+            android:clickable="false"
+            android:editable="false"
+            android:focusable="false"
+            android:text="Mis Servicios"
+            android:textColor="@color/button_text_color" />
+
+        <Button
+            android:id="@+id/buttonDelete"
+            android:layout_width="280dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:text="Borrar Cuenta"
+            android:textColor="@color/button_text_color" />
 
         <Button
             android:id="@+id/buttonVolverMenu"
@@ -101,9 +111,10 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="20dp"
-            android:textColor="@color/button_text_color"
             android:background="@color/colorPrimary"
-            android:text="Volver" />
+            android:text="Volver"
+            android:textColor="@color/button_text_color" />
+
 
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
