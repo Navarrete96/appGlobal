@@ -11,6 +11,49 @@
         android:orientation="vertical">
         <include layout="@layout/toolbar"/>
 
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="35dp"
+            android:text="Entrepreneurs" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="25dp"
+            android:text="Centro de ayuda" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:textSize="22sp"
+            android:layout_marginBottom="20dp"
+            android:text="Sobre nosotros:" />
+
+        <TextView
+            android:id="@+id/textView8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_margin="9dp"
+            android:text="Entrepreneurs es una
+plataforma para aquellas personas que no tienen trabajo fijo o ni siquiera poseen un trabajo,
+para que puedan brindar sus servicios profesionales, con el fin de mejorar su calidad de
+vida." />
+
     </LinearLayout>
 
 
